@@ -23,6 +23,15 @@ h2 {
   font-size: 2.3rem;
   color: #2e2e2e; }
 
+h3 {
+  font-family: "Montserrat Bold";
+  font-size: 2.1rem; }
+
+h4 {
+  font-family: "Montserrat Bold";
+  font-size: 1.8rem;
+  margin-bottom: 12px; }
+
 a {
   color: #2e2e2e;
   text-decoration: underline;
@@ -30,6 +39,14 @@ a {
   a:hover {
     color: #DE1300;
     transition-duration: 0.2s; }
+
+section {
+  margin-bottom: 80px; }
+
+p {
+  font-family: "Montserrat Medium";
+  font-size: 2.1rem;
+  color: #2e2e2e; }
 
 .header {
   height: 800px;
@@ -45,7 +62,8 @@ a {
       margin: 32px 0px 32px; }
     .header-nav__phone {
       margin-top: 26px; }
-      .header-nav__phone p {
+      .header-nav__phone span {
+        display: block;
         font-size: 1.6rem;
         margin: 0px;
         font-family: "Montserrat Bold"; }
@@ -82,6 +100,48 @@ a {
       font-size: 3.8rem;
       font-family: "Montserrat Bold"; }
 
+.briefly h2 {
+  margin-bottom: 20px; }
+
+.shop {
+  position: relative; }
+  .shop-item {
+    width: 100%;
+    height: 170px;
+    margin: 10px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25); }
+    .shop-item__img {
+      display: flex;
+      justify-content: center;
+      margin: 50px 0px; }
+      .shop-item__img img {
+        padding-left: 5px;
+        width: 100%;
+        height: 100%;
+        max-width: 80px;
+        max-height: 80px; }
+    .shop-item__text {
+      display: flex;
+      justify-content: space-between; }
+      .shop-item__text h3 {
+        display: inline;
+        margin-top: 7rem;
+        text-align: left; }
+      .shop-item__text a {
+        display: inline;
+        font-size: 1.8rem;
+        text-align: right; }
+      .shop-item__text h4 {
+        text-align: right; }
+    .shop-item__link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 0px; }
+      .shop-item__link h3 {
+        display: none; }
+
 @media only screen and (max-width: 1025px) {
   h2 {
     font-size: 1.9rem; }
@@ -97,11 +157,34 @@ a {
     font-size: 2.4rem; } }
 
 @media only screen and (max-width: 767px) {
+  p {
+    font-size: 1.5rem; }
+  section {
+    margin-bottom: 60px; }
   .header {
-    max-height: 600px; }
+    max-height: 550px; }
     .header-nav__item, .header-nav__phone {
       display: none; }
     .header-title h1 {
       font-size: 6rem; }
     .header-title span {
-      font-size: 2.2rem; } }
+      font-size: 2.2rem; }
+  .shop-item h3 {
+    display: none; }
+  .shop-item__img img {
+    margin-top: 20px;
+    width: 55px;
+    height: 60px; }
+  .shop-item__link {
+    margin: -70px auto 0 auto; }
+    .shop-item__link h3, .shop-item__link h4 {
+      text-align: right;
+      font-size: 1.6rem;
+      display: inline-block; }
+    .shop-item__link a {
+      font-size: 1.6rem; } }
+
+@media only screen and (max-width: 425px) {
+  .shop-item__img img {
+    width: 45px;
+    height: 45px; } }

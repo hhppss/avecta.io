@@ -12,12 +12,17 @@ $color-black:							#2e2e2e
 *
 	+MontM()
 	font-size: 10px
-
 h2 
 	+MontB 
 	font-size: 2.3rem
 	color: $color-black
-
+h3 
+	+MontB
+	font-size: 2.1rem
+h4 
+	+MontB
+	font-size: 1.8rem
+	margin-bottom: 12px
 a 
 	color: $color-black
 	text-decoration: underline
@@ -25,7 +30,12 @@ a
 	&:hover
 		color: $color-item
 		transition-duration: 0.2s
-	
+section 
+	margin-bottom: 80px
+p 
+	+MontM
+	font-size: 2.1rem
+	color: $color-black
 
 .header 
 	height: 800px
@@ -41,7 +51,8 @@ a
 			margin: 32px 0px 32px
 		&__phone 
 			margin-top: 26px
-			p
+			span
+				display: block
 				font-size: 1.6rem
 				margin: 0px
 				+MontB
@@ -78,7 +89,47 @@ a
 			margin-top: 20px
 			font-size: 3.8rem
 			+MontB
-
+.briefly 
+	h2 
+		margin-bottom: 20px
+.shop 
+	position: relative
+	&-item 
+		width: 100%
+		height: 170px
+		margin: 10px 0px
+		border-radius: 10px
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+		&__img 
+			display: flex 
+			justify-content: center
+			margin: 50px 0px 
+			img 
+				padding-left: 5px
+				width: 100%
+				height: 100%
+				max-width: 80px
+				max-height: 80px
+		&__text 
+			display: flex
+			justify-content: space-between
+			h3 
+				display: inline
+				margin-top: 7rem
+				text-align: left
+			a 
+				display: inline
+				font-size: 1.8rem
+				text-align: right
+			h4 
+				text-align: right
+		&__link 
+			display: flex 
+			flex-direction: column
+			justify-content: center
+			padding: 20px 0px
+			h3 
+				display: none
 
 
 @media only screen and (max-width: 1025px)
@@ -99,8 +150,12 @@ a
 			span 
 				font-size: 2.4rem
 @media only screen and (max-width: 767px)
+	p
+		font-size: 1.5rem
+	section 
+		margin-bottom: 60px
 	.header
-		max-height: 600px
+		max-height: 550px
 		&-nav
 			&__item, &__phone 
 				display: none	
@@ -109,4 +164,28 @@ a
 				font-size: 6rem
 			span 
 				font-size: 2.2rem
-		
+	.shop 
+		&-item 
+			h3 
+				display: none
+			&__img 
+				img 
+					margin-top: 20px
+					width: 55px
+					height: 60px
+			&__link
+				margin: -70px auto 0 auto
+				h3,h4
+					text-align: right
+					font-size: 1.6rem
+					display: inline-block
+				a 
+					font-size: 1.6rem
+@media only screen and (max-width: 425px)
+	.shop 
+		&-item 
+			&__img 
+				img 
+					width: 45px
+					height: 45px
+			
