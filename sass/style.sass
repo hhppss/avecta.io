@@ -1,0 +1,468 @@
+@import "_fonts.sass"
+
+$color-item:      				#f9ad4a
+$color-white:     				#ffffff
+$color-black:							#222222
+$color-general-bg-light: #f8f8f8
+$color-text__light:				#8d8d8d
+
+=MontSB()
+	font-family: "Montserrat SemiBold" 
+=MontB()
+	font-family: "Montserrat Bold"
+=MontR()
+	font-family: "Montserrat Regular"
+a
+	text-decoration: none
+	color: white
+	&:hover
+		color: white
+		text-decoration: none 
+
+*
+	outline: none !important
+	+MontR
+	font-size: 16px
+
+.line img
+	width: 100%
+	max-width: 1440px
+	margin: 0 auto 10px auto
+.line-mobile img
+	display: none
+	width: 100%
+	height: auto
+	margin-bottom: 10px
+h2
+	text-align: center
+	margin: 30px 0px 30px 0px
+	font-size: 29px
+	+MontB
+
+	
+
+=button-style()
+	letter-spacing: 1px
+	font-size: 16px 
+	width: 200px
+	height: 45px
+	background-color: $color-item
+	color: $color-black
+	border: none
+	border-radius: 15px
+	-webkit-transform: .5s
+	transition-duration: .5s
+	outline: 0 !important
+	&:active
+		transform: translateY(3px)
+	&:focus
+		outline: none
+////I			Голова сайта
+////I		 Родитель .header
+////I		
+
+.header 
+	background: url('../img/header-bg.jpg'), $color-black 50% 50% no-repeat
+	background-size: cover
+	width: 100%
+	min-height: 420px
+	&-logo
+		margin-top: 20px
+		a, img
+			width: 25%
+			max-width: 100px
+		&__phone
+			border: 1px solid $color-text__light
+			padding: 1px 10px
+			border-radius: 10px
+			margin-top: -2px
+	&-title 
+		margin-top: 160px
+		line-height: 82px
+		p
+			color: $color-white
+			font-size: 72px
+			letter-spacing: 2px	
+	&-btn
+		margin: 60px 0 90px 0 
+		a
+			+button-style()
+			font-size: 14px
+			padding: 10px 15px
+			&:hover
+				background-color: $color-white
+				-webkit-transform: .5s
+				transition-duration: .5s
+		img
+			margin-left: 10px
+			width: 15%
+
+////I			Второй блок. Основная информация о магазине
+////I		 Родитель .information
+////I		
+
+.information
+	background-color: $color-general-bg-light
+	&-text
+		margin-top: 50px
+		text-align: justify
+		font-size: 16px
+		margin-bottom: 50px
+		color: $color-text__light
+		line-height: 1.5
+		letter-spacing: 1.2px
+
+////I			Блок преимуществ усилителя JHL 1969
+////I		 Родитель .advantaged
+////I		
+
+.advantaged 
+	background-color: $color-white
+	min-height: 865px
+	width: 100%
+	&-title
+		font-size: 29px
+		+MontB
+		color: $color-black
+		text-align: center
+		margin: 50px 0px 10px 0px
+	&-item, &-item-2
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		margin: 35px 0px
+		text-align: left
+		&-2
+			flex-direction: row-reverse
+			text-align: right
+		img
+			display: inline
+			max-width: 555px
+			width: 98%
+			border-radius: 15px
+			box-shadow: 2px 2px 40px $color-text__light
+		&__text
+			color: $color-black
+			h2
+				margin-bottom: 30px
+				font-size: 29px
+				+MontB
+			p
+				letter-spacing: 1.2px
+
+////I			Блок характеристик усилителя JHL 1969
+////I		 Родитель .jhl
+////I		
+.spec
+	min-height: 300px
+	background-attachment: fixed
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/jhl1969.jpg')
+	&-block
+		width: 100%
+		max-width: 500px
+		min-height: 200px
+		margin: 20px auto 20px auto
+		background-color: rgba(34, 34, 34, 0.7)
+		border-radius: 20px
+	&-title
+		padding-top: 20px
+		color: $color-white
+	&-item
+		padding: 30px
+		+MontR()
+		color: $color-white
+		letter-spacing: 1.2px
+		font-size: 16px
+
+////I			Блок покупки усилителя JHL 1969
+////I		 Родитель .jhlpay
+////I		
+
+.jhlpay
+	min-height: 300px
+	&-title
+		color: $color-black
+	&-flex
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: center
+		margin-top: 50px
+		color: $color-text__light
+		img
+			max-width: 400px
+			width: 100%
+			margin-bottom: 20px
+		h2
+			font-size: 29px
+		p
+			line-height: 1.5
+			letter-spacing: 1px
+		h3
+			text-align: left
+			margin: 20px 0 40px 0px
+		span
+			font-weight: 600
+			font-size: 26px
+		&__button
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+			margin-bottom: 50px
+			outline: none !important
+		a
+			width: 270px
+			height: 40px
+			text-align: center
+			line-height: 23px
+			margin: 5px 
+			border-radius: 25px
+			border: 2px solid $color-text__light
+
+.acoustics
+	background-color: $color-black
+	min-height: 300px
+	width: 100%
+	padding-bottom: 10px
+	&-title
+		color: $color-white
+	&-content
+		min-height: 200px
+		margin: 20px 0 50px 0
+		border-radius: 15px
+		background-color: $color-general-bg-light
+	&-text 
+		padding: 20px
+		h5
+			+MontB
+			text-align: center
+			letter-spacing: 1.3px
+			margin-bottom: 20px
+		h6 
+			+MontB
+			padding-bottom: 15px
+	&-slider
+		img
+			max-width: 500px
+			width: 80%
+			margin: 70px auto 10px auto
+	&-text
+		&__item
+			padding: 10%
+			+MontR
+.order 
+	background-image: url(../img/musica-bg.jpg)
+	background-attachment: fixed
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	&-form
+		width: 100%
+		max-width: 500px
+		margin: 20px auto 25px auto
+		padding: 20px 40px 
+		box-shadow: 2px 2px 20px $color-text__light
+		border-radius: 15px
+		background-color: $color-white
+		form
+			display: flex
+			justify-content: space-around
+			flex-direction: column
+		input, button
+			width: 100%
+			margin: 5px auto
+			font-size: 16px
+			border-radius: 5px
+		input 
+			display: inline-block !important
+			max-width: 500px
+			padding: 10px
+			border: 2px solid $color-item
+		button
+			max-width: 190px
+			height: 35px
+			margin-top: 10px	
+			background-color: $color-item
+			border: none
+			-webkit-transition: 0.5s
+			transition: 0.5s
+			&:hover 
+				color: $color-white
+				background-color: $color-text__light
+				-webkit-transition: 0.5s
+				transition: 0.5s
+		&__whatsapp, &__call
+			display: block
+			width: 100%
+			max-width: 220px
+			height: 40px
+			text-align: center
+			margin: 10px auto 0px auto
+			padding: 8px
+			color: $color-white
+			font-size: 16px
+			border-radius: 5px
+			background-color: #25d366
+		&__call
+			background-color: $color-black
+	&-or 	
+		text-align: center
+		width: 80%
+		margin: 0 auto
+		overflow: hidden
+		span 
+			position: relative
+			&::before, &::after
+				display: block
+				width: 1000px
+				content: ''
+				position: absolute
+				border-bottom: 1px solid #000
+				top: 50%
+			&::before
+				right: 50px
+			&::after 
+				left: 50px
+.map
+	color: $color-white
+	background-color: $color-black
+	iframe
+		max-width: 100%
+		max-height: 300px
+		margin-bottom: 20px
+	&-icon
+		width: 50%
+		max-width: 400px
+		margin: 0 auto
+		img	
+			width: 100%
+			text-align: center
+			margin-bottom: 20px
+	a
+		color: $color-item
+		text-decoration: underline
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1025px)
+	.advantaged-item__text
+		margin-top: 80px
+
+@media only screen and (max-width: 1023px)
+	.advantaged-item__text
+		p
+			letter-spacing: 0.8px
+	.header-title p
+		font-size: 52px
+
+@media only screen and (max-width: 767px)
+	.header-btn 
+		display: flex
+		justify-content: center
+		a 
+			width: 154px
+			height: 35px
+			font-size: 14px
+			line-height: 14px
+	.advantaged-item__text
+		text-align: left
+	.jhlpay
+		&-flex
+			h2
+				text-align: center
+			a 
+				width: 270px
+				height: 40px
+	.line
+		display: none
+	.line-mobile img
+		display: block
+	.menu
+		display: none
+  .trigger
+    display: inline-block
+    margin: 3px
+    cursor: pointer
+  .trigger i 
+		display: block
+    width: 30px
+    height: 6px
+		margin: 4px auto
+		background: #222
+	.show
+		display: block
+	.acoustics-slider
+		img
+			margin-top: 0px
+@media only screen and (max-width: 426px)
+	.header
+		max-height: 350px
+	.header-title p
+		font-size: 28px
+	.header-title 
+		line-height: 35px
+		margin-top: 45px
+	.information-title
+		font-size: 24px
+	.information-text
+		margin-top: 10px
+		text-align: left
+		font-size: 16px
+	.advantaged
+		padding-bottom: 15px
+	.advantaged-item
+			margin: 20px 0px
+	.advantaged-title
+		text-align: left
+		font-size: 24px
+		line-height: 30px
+	.advantaged-item__text
+		margin-top: 5px
+		h2
+			font-size: 20px
+			margin-bottom: 10px
+	.jhlpay-flex__button
+		flex-direction: column
+		a
+			margin: 20px auto 0px auto
+	.jhlpay-title
+		h2
+			font-size: 28px
+			margin-bottom: 0
+	.jhlpay-flex
+		h2
+			font-size: 28px
+		p
+			margin-bottom: 20px
+		h3
+			text-align: center
+			margin: 15px 0
