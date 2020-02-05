@@ -32,7 +32,7 @@
   </head>
   <body>
 		<section class="header">
-			<div class="header-nav">
+			<div class="header-nav fixed-top">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
@@ -176,14 +176,106 @@
 				</div>
 			</div>
 		</section>
-		<section></section>
-		<section></section>
-		<section></section>
-		<section></section>
+		<section class="slider">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Фотогалерея</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<div class="slider-block">
+							<div class="slider-item">
+								<img src="img/slider1.jpg" alt="">
+							</div>
+							<div class="slider-item">
+								<img src="img/slider2.jpg" alt="">
+							</div>
+							<div class="slider-item">
+								<img src="img/slider3.jpg" alt="">
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="rent">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Аренда</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p>«ТЦ Авеста» — уникальный многофункциональный торговый центр в Сарснке. Проект удачно расположен в юго-западном районе в трех километрах от центра города Саранск.</p>
+						<br>
+							<p>У ТЦ собственная развитая инфраструктура и хорошая транспортная доступность. ОПИСАТЬ ПРЕИМУЩЕСТВА ДЛЯ АРЕНДАТОРОВ.</p>
+							<br>
+							<p>Будем рады сотрудничать с вами! Отправьте заявку на аренду на email или свяжитесь с нами по вы телефону.</p>
+							<br>
+							<p>Вы уже являетесь нашим арендатором, но не нашли себя на нашем сайте? Напишите нам: avestatc@gmail.com</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="feedback">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="feedback-form">
+							<h2 class="feedback-title">Форма заявки на аренду</h2>
+							<form action="mailer/smart.php" method="POST">
+								<input type="text" name="user_name" placeholder="Введите ФИО">
+								<input type="email" name="user_mail" placeholder="Введите почту">
+								<input id="phone_mask" type="text" name="user_phone" placeholder="Введите номер телефона">
+								<button type="submit">Отправить форму</button>
+							</form>
+							<div class="feedback-or">
+								<span>Или</span>
+							</div>
+							<a class="feedback-form__whatsapp" href="https://api.whatsapp.com/send?phone=79255054385">Написать в What's app</a>
+							<a class="feedback-form__call" href="tel:89255054385">Позвонить</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<div class="about-text">
+							<p>Россия, 430043, г. Саранск,</p>
+							<p>ул. М. Расковой, 16Б</p>
+							<p>Время работы: пн-вс с 9:00 до 18:00</p>
+							<p>Тел/whatsapp: +7 (927) 276-04-54</p>
+							<p>Почта: avestatc@gmail.com</p>
+						</div>
+						<div class="about-link">
+							<p>Мы в социальных сетях:</p>
+							<div class="about-link__png">
+								<a href=""><img src="img/vk.png" alt=""></a>
+								<a href=""><img src="img/whatsapp.png" alt=""></a>
+								<a href=""><img src="img/insta.png" alt=""></a>
+								<a href=""><img src="img/google.png" alt=""></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<iframe src="https://yandex.ru/map-widget/v1/-/CKQbvAYn" height="400" frameborder="1" allowfullscreen="true"></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
 		<script src="js/script.js"></script>
 		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="slick/slick.min.js"></script>
+		<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- Bootstrap core JavaScript
