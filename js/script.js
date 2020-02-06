@@ -49,3 +49,11 @@ $('.slider-block').slick({
 $(function(){
   $("#phone_mask").mask("8(999) 999-9999");
 });
+$(document).ready(function(){
+  $("#menu ,#menu1, #menu2").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+    top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 800);
+  });
+});

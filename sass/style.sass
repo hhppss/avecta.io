@@ -42,7 +42,7 @@ a
 .next
 	right: -10%
 section 
-	margin-bottom: 80px
+	padding-top: 100px
 p 
 	+MontM
 	font-size: 1.6rem
@@ -55,14 +55,20 @@ p
 	background-repeat: no-repeat
 	background-size: cover
 	&-nav 
-		height: 100px
+		height: 80px
 		font-size: 16px
 		background-color: $color-white
-		
-		&__logo
-			margin: 32px 0px 32px
+		box-shadow: 4px 0px 10px $color-black
+		margin-top: 0	
+		&__logo a
+			display: block
+			margin: 23px 0px 20px	
+			+MontB 
+			font-size: 2.3rem
+			color: $color-black
+			text-decoration: none
 		&__phone 
-			margin-top: 26px
+			margin-top: 18px
 			span
 				display: block
 				font-size: 1.6rem
@@ -76,14 +82,14 @@ p
 				display: flex
 				justify-content: space-around
 				flex-direction: row
-				margin-top: 35px
+				margin-top: 30px
 			li 
 				list-style: none
 				a 
 					font-size: 1.4rem
 					+MontB
 					text-decoration: none
-					padding-bottom: 33px
+					padding-bottom: 28px
 					transition-duration: 0.2s
 					&:hover
 						color: $color-item
@@ -94,7 +100,7 @@ p
 		+MontB
 		text-align: left
 		h1 
-			padding-top: 200px
+			padding-top: 250px
 			font-size: 12rem
 			+MontB
 		span 
@@ -171,8 +177,9 @@ p
 			height: auto
 			border-radius: 10px
 .rent 
+	margin-top: 30px
 	h2 
-		margin-bottom: 20px
+		margin-bottom: 40px
 .feedback
 	a 
 		text-decoration: none
@@ -250,13 +257,22 @@ p
 				right: 50px
 			&::after 
 				left: 50px
-.about 
+.about
+	margin-bottom: 30px
+	h2 
+		margin-bottom: 40px
 	iframe 
 		width: 100%
 		border: none
 		border-radius: 10px
+	&-information 
+		height: 350px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
 	&-text 
-		margin-top: 50px
+		a 
+			font-size: 1.6rem
 	&-link
 		&__png
 			margin-bottom: 15px
@@ -281,6 +297,8 @@ p
 		img 
 			max-width: 400px
 @media only screen and (max-width: 1023px)
+	section
+		padding-top: 50px
 	.header 
 		&-nav
 			&__item 
@@ -295,11 +313,14 @@ p
 @media only screen and (max-width: 767px)
 	p
 		font-size: 1.5rem
-	section 
-		margin-bottom: 60px
+	// section 
+	// 	margin-bottom: 60px
 	.header
 		max-height: 550px
 		&-nav
+			height: 70px
+			&__logo 
+				text-align: center
 			&__item, &__phone 
 				display: none	
 		&-title
@@ -328,10 +349,17 @@ p
 			max-height: 100px
 			img 
 				width: 100%
+	.rent 
+		margin-top: 0	
 @media only screen and (max-width: 580px)
+	.header-title h1 
+		padding-top: 150px
 	.slider-item
 		img 
 			max-height: 185px
+	.feedback-form
+		a
+			font-size: 1.4rem
 @media only screen and (max-width: 425px)
 	.shop 
 		&-item 

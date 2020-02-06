@@ -55,7 +55,7 @@ a {
   right: -10%; }
 
 section {
-  margin-bottom: 80px; }
+  padding-top: 100px; }
 
 p {
   font-family: "Montserrat Medium";
@@ -69,13 +69,20 @@ p {
   background-repeat: no-repeat;
   background-size: cover; }
   .header-nav {
-    height: 100px;
+    height: 80px;
     font-size: 16px;
-    background-color: #ffffff; }
-    .header-nav__logo {
-      margin: 32px 0px 32px; }
+    background-color: #ffffff;
+    box-shadow: 4px 0px 10px #2e2e2e;
+    margin-top: 0; }
+    .header-nav__logo a {
+      display: block;
+      margin: 23px 0px 20px;
+      font-family: "Montserrat Bold";
+      font-size: 2.3rem;
+      color: #2e2e2e;
+      text-decoration: none; }
     .header-nav__phone {
-      margin-top: 26px; }
+      margin-top: 18px; }
       .header-nav__phone span {
         display: block;
         font-size: 1.6rem;
@@ -88,14 +95,14 @@ p {
       display: flex;
       justify-content: space-around;
       flex-direction: row;
-      margin-top: 35px; }
+      margin-top: 30px; }
     .header-nav__item li {
       list-style: none; }
       .header-nav__item li a {
         font-size: 1.4rem;
         font-family: "Montserrat Bold";
         text-decoration: none;
-        padding-bottom: 33px;
+        padding-bottom: 28px;
         transition-duration: 0.2s; }
         .header-nav__item li a:hover {
           color: #DE1300;
@@ -106,7 +113,7 @@ p {
     font-family: "Montserrat Bold";
     text-align: left; }
     .header-title h1 {
-      padding-top: 200px;
+      padding-top: 250px;
       font-size: 12rem;
       font-family: "Montserrat Bold"; }
     .header-title span {
@@ -185,8 +192,10 @@ p {
       height: auto;
       border-radius: 10px; }
 
-.rent h2 {
-  margin-bottom: 20px; }
+.rent {
+  margin-top: 30px; }
+  .rent h2 {
+    margin-bottom: 40px; }
 
 .feedback a {
   text-decoration: none; }
@@ -267,19 +276,26 @@ p {
     .feedback-or span::after {
       left: 50px; }
 
-.about iframe {
-  width: 100%;
-  border: none;
-  border-radius: 10px; }
-
-.about-text {
-  margin-top: 50px; }
-
-.about-link__png {
-  margin-bottom: 15px; }
-  .about-link__png img {
-    margin: 0 3px;
-    max-width: 30px; }
+.about {
+  margin-bottom: 30px; }
+  .about h2 {
+    margin-bottom: 40px; }
+  .about iframe {
+    width: 100%;
+    border: none;
+    border-radius: 10px; }
+  .about-information {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .about-text a {
+    font-size: 1.6rem; }
+  .about-link__png {
+    margin-bottom: 15px; }
+    .about-link__png img {
+      margin: 0 3px;
+      max-width: 30px; }
 
 @media only screen and (max-width: 1200px) {
   .slider-item img {
@@ -295,6 +311,8 @@ p {
     max-width: 400px; } }
 
 @media only screen and (max-width: 1023px) {
+  section {
+    padding-top: 50px; }
   .header-nav__item {
     display: none; }
   .header-title h1 {
@@ -307,12 +325,14 @@ p {
 @media only screen and (max-width: 767px) {
   p {
     font-size: 1.5rem; }
-  section {
-    margin-bottom: 60px; }
   .header {
     max-height: 550px; }
-    .header-nav__item, .header-nav__phone {
-      display: none; }
+    .header-nav {
+      height: 70px; }
+      .header-nav__logo {
+        text-align: center; }
+      .header-nav__item, .header-nav__phone {
+        display: none; }
     .header-title h1 {
       font-size: 6rem; }
     .header-title span {
@@ -334,11 +354,17 @@ p {
   .shop .slider-item {
     max-height: 100px; }
     .shop .slider-item img {
-      width: 100%; } }
+      width: 100%; }
+  .rent {
+    margin-top: 0; } }
 
 @media only screen and (max-width: 580px) {
+  .header-title h1 {
+    padding-top: 150px; }
   .slider-item img {
-    max-height: 185px; } }
+    max-height: 185px; }
+  .feedback-form a {
+    font-size: 1.4rem; } }
 
 @media only screen and (max-width: 425px) {
   .shop-item__img img {
