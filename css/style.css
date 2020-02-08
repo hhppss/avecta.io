@@ -63,63 +63,73 @@ p {
   letter-spacing: 1px;
   color: #2e2e2e; }
 
+.headers {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50; }
+  .headers:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 15px #2e2e2e;
+    z-index: 3; }
+
 .header {
   height: 700px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../img/header-bg.jpg) 50% 40%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../img/avesta8.jpg) 50% 15%;
   background-repeat: no-repeat;
   background-size: cover; }
-  .header-nav {
-    height: 80px;
-    font-size: 16px;
-    background-color: #ffffff;
-    box-shadow: 4px 0px 10px #2e2e2e;
-    margin-top: 0; }
-    .header-nav__logo a {
-      display: block;
-      margin: 23px 0px 20px;
-      font-family: "Montserrat Bold";
-      font-size: 2.3rem;
-      color: #2e2e2e;
-      text-decoration: none; }
-    .header-nav__phone {
-      margin-top: 18px; }
-      .header-nav__phone span {
-        display: block;
-        font-size: 1.6rem;
-        margin: 0px;
-        font-family: "Montserrat Bold"; }
-      .header-nav__phone a {
-        font-size: 1.6rem;
-        font-family: "Montserrat Bold"; }
-    .header-nav__item ul {
-      display: flex;
-      justify-content: space-around;
-      flex-direction: row;
-      margin-top: 30px; }
-    .header-nav__item li {
-      list-style: none; }
-      .header-nav__item li a {
-        font-size: 1.4rem;
-        font-family: "Montserrat Bold";
-        text-decoration: none;
-        padding-bottom: 28px;
-        transition-duration: 0.2s; }
-        .header-nav__item li a:hover {
-          color: #DE1300;
-          border-bottom: 4px solid #DE1300;
-          transition-duration: 0.2s; }
   .header-title {
     color: #ffffff;
     font-family: "Montserrat Bold";
     text-align: left; }
     .header-title h1 {
-      padding-top: 250px;
+      padding-top: 180px;
       font-size: 12rem;
       font-family: "Montserrat Bold"; }
     .header-title span {
       margin-top: 20px;
       font-size: 3.8rem;
       font-family: "Montserrat Bold"; }
+  .header-body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center; }
+    .header-body__logo, .header-body__phone {
+      position: relative;
+      z-index: 4; }
+      .header-body__logo a, .header-body__phone a {
+        font-family: "Montserrat Bold";
+        text-decoration: none;
+        font-size: 2.2rem;
+        display: block;
+        min-width: 100%; }
+    .header-body__phone {
+      margin-right: 120px; }
+      .header-body__phone a, .header-body__phone span {
+        font-size: 1.6rem; }
+  .header-burger {
+    display: none; }
+  .header-list {
+    display: flex;
+    position: relative;
+    list-style: none;
+    z-index: 4; }
+    .header-list li {
+      padding: 5px 0px 0px 30px; }
+    .header-list a {
+      font-family: "Montserrat Bold";
+      text-decoration: none;
+      color: #2e2e2e;
+      font-size: 1.3rem; }
 
 .briefly h2 {
   margin-bottom: 20px; }
@@ -302,7 +312,19 @@ p {
     max-width: 550px;
     width: auto; } }
 
+@media only screen and (max-width: 1023px) {
+  .header-body__phone {
+    display: none; }
+  section {
+    padding-top: 50px; }
+  .slick-center {
+    padding: 0 20px; } }
+
 @media only screen and (max-width: 992px) {
+  .header-title {
+    margin-top: 0; }
+    .header-title h1 {
+      font-size: 9rem; }
   h2 {
     font-size: 1.9rem; }
   .header {
@@ -310,33 +332,72 @@ p {
   .slider-item img {
     max-width: 400px; } }
 
-@media only screen and (max-width: 1023px) {
-  section {
-    padding-top: 50px; }
-  .header-nav__item {
-    display: none; }
-  .header-title h1 {
-    font-size: 9rem; }
-  .header-title span {
-    font-size: 2.4rem; }
-  .slick-center {
-    padding: 0 20px; } }
-
 @media only screen and (max-width: 767px) {
+  .lock {
+    overflow: hidden; }
   p {
     font-size: 1.5rem; }
-  .header {
-    max-height: 550px; }
-    .header-nav {
-      height: 70px; }
-      .header-nav__logo {
-        text-align: center; }
-      .header-nav__item, .header-nav__phone {
-        display: none; }
-    .header-title h1 {
-      font-size: 6rem; }
-    .header-title span {
+  .header-body {
+    height: 50px; }
+  .header-burger {
+    display: block;
+    position: relative;
+    margin-top: 28px;
+    width: 30px;
+    height: 30px;
+    z-index: 4;
+    margin-right: 10px; }
+    .header-burger span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      top: 0px;
+      background-color: #2e2e2e;
+      transition: all 0.3s ease-out 0.1s; }
+    .header-burger:before, .header-burger:after {
+      content: '';
+      background-color: #2e2e2e;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      transition: all 0.3s ease-out 0.1s; }
+    .header-burger:before {
+      top: 9px; }
+    .header-burger:after {
+      top: -9px; }
+  .header-menu {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #ffffff;
+    padding: 80px 0 0 0;
+    transition: all 0.3s ease-in-out 0.1s; }
+  .header-list {
+    display: block;
+    text-align: center;
+    padding: 0; }
+    .header-list li {
+      padding: 0;
+      margin-top: 40px; }
+    .header-list a {
+      margin-top: 20px;
       font-size: 2.2rem; }
+  .header-menu.active {
+    top: 0vh;
+    transition: all 0.3s ease-in-out 0.1s; }
+  .header-burger.active:before {
+    transform: rotate(45deg);
+    top: 0px; }
+  .header-burger.active:after {
+    transform: rotate(-45deg);
+    top: 0px; }
+  .header-burger.active span {
+    display: none; }
   .shop-item h3 {
     display: none; }
   .shop-item__img img {
@@ -359,6 +420,8 @@ p {
     margin-top: 0; } }
 
 @media only screen and (max-width: 580px) {
+  .header {
+    max-height: 550px; }
   .header-title h1 {
     padding-top: 150px; }
   .slider-item img {
@@ -367,6 +430,10 @@ p {
     font-size: 1.4rem; } }
 
 @media only screen and (max-width: 425px) {
+  .header-title h1 {
+    font-size: 6rem; }
+  .header-title span {
+    font-size: 2.2rem; }
   .shop-item__img img {
     width: 50px;
     height: 45px;
