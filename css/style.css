@@ -55,7 +55,7 @@ a {
   right: -10%; }
 
 section {
-  padding-top: 100px; }
+  padding-top: 120px; }
 
 p {
   font-family: "Montserrat Medium";
@@ -82,7 +82,7 @@ p {
 
 .header {
   height: 700px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../img/avesta8.jpg) 50% 15%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../img/avesta8.JPG), #0e0e0e 50% 15%;
   background-repeat: no-repeat;
   background-size: cover; }
   .header-title {
@@ -124,7 +124,7 @@ p {
     list-style: none;
     z-index: 4; }
     .header-list li {
-      padding: 5px 0px 0px 30px; }
+      padding: 5px 0px 0px 35px; }
     .header-list a {
       font-family: "Montserrat Bold";
       text-decoration: none;
@@ -288,8 +288,6 @@ p {
 
 .about {
   margin-bottom: 30px; }
-  .about h2 {
-    margin-bottom: 40px; }
   .about iframe {
     width: 100%;
     border: none;
@@ -298,7 +296,8 @@ p {
     height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-top: 40px; }
   .about-text a {
     font-size: 1.6rem; }
   .about-link__png {
@@ -316,7 +315,7 @@ p {
   .header-body__phone {
     display: none; }
   section {
-    padding-top: 50px; }
+    padding-top: 80px; }
   .slick-center {
     padding: 0 20px; } }
 
@@ -383,13 +382,13 @@ p {
     padding: 0; }
     .header-list li {
       padding: 0;
-      margin-top: 40px; }
+      margin-top: 30px; }
     .header-list a {
       margin-top: 20px;
       font-size: 2.2rem; }
   .header-menu.active {
     top: 0vh;
-    transition: all 0.3s ease-in-out 0.1s; }
+    transition: all 0.2s ease-in-out 0.1s; }
   .header-burger.active:before {
     transform: rotate(45deg);
     top: 0px; }
