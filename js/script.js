@@ -9,7 +9,6 @@ $('.slider-block').slick({
   waitForAnimate: false,
   centerMode: true,
   adaptiveHeight: true,
-  autoplay: false,
   easing: 'easeInOutExpo',
   pauseOnHover: true,
   pauseOnFocus: true,
@@ -19,8 +18,7 @@ $('.slider-block').slick({
       settings: {
         arrows: true,
         centerMode: true,
-        slidesToShow: 1,
-        autoplay: false
+        slidesToShow: 1
       }
     },
     {
@@ -30,9 +28,7 @@ $('.slider-block').slick({
         centerMode: true,
         centerPadding: '40px',
         slidesToShow: 1,
-        variableWidth: true,
-        autoplay: true,
-        autoplaySpeed: 1000
+        variableWidth: true
       }
     },
     {
@@ -65,5 +61,8 @@ $(document).ready(function() {
   $('.header-link').click(function(event) {
     $('.header-burger, .header-menu').removeClass('active');
     $('body').removeClass('lock');
+  })
+  $('.shop-item__visible').click(function(event) {
+    $('.close').toggleClass('closeup');
   })
 });

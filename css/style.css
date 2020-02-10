@@ -41,6 +41,9 @@ a {
     color: #DE1300;
     transition-duration: 0.2s; }
 
+.closeup {
+  display: none; }
+
 .prev, .next {
   position: absolute;
   top: 45%;
@@ -82,7 +85,7 @@ p {
 
 .header {
   height: 700px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../img/avesta8.JPG), #0e0e0e 50% 15%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(../img/avesta8.jpg), #0e0e0e 50% 15%;
   background-repeat: no-repeat;
   background-size: cover; }
   .header-title {
@@ -435,5 +438,5 @@ p {
     font-size: 2.2rem; }
   .shop-item__img img {
     width: 50px;
-    height: 45px;
-    margin-left: 30px; } }
+    height: 50px;
+    margin-left: 20px; } }
