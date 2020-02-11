@@ -44,6 +44,9 @@ a {
 .closeup {
   display: none; }
 
+.link-shop {
+  display: inline-block; }
+
 .prev, .next {
   position: absolute;
   top: 45%;
@@ -407,7 +410,8 @@ p {
     width: 55px;
     height: 60px; }
   .shop-item__link {
-    margin: -70px auto 0 auto; }
+    max-height: 100px;
+    margin: 0px auto 0 auto; }
     .shop-item__link h3 {
       text-align: right;
       font-size: 1.6rem;

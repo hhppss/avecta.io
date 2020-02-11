@@ -42,6 +42,9 @@ $('.slider-block').slick({
     }
   ]
 });
+$('.slide-block').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  LazyLoad.update();
+});
 $(function(){
   $("#phone_mask").mask("8(999) 999-9999");
 });
@@ -63,6 +66,6 @@ $(document).ready(function() {
     $('body').removeClass('lock');
   })
   $('.shop-item__visible').click(function(event) {
-    $('.close').toggleClass('closeup');
+    $('.closes').toggleClass('closeup');
   })
 });
